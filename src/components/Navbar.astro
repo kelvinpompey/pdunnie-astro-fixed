@@ -1,0 +1,48 @@
+---
+import { SearchIcon, BagIcon, UserIcon, MenuIcon } from '../components/Icons';
+---
+
+<nav class="bg-primary text-white py-2">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="lg:hidden">
+          <button class="p-2">
+            <MenuIcon client:load />
+          </button>
+        </div>
+        <img 
+          src="/logo.png"
+          alt="P & Dunni Logo" 
+          class="h-16 w-16 object-contain hidden md:block"
+        />
+      </div>
+      
+      <div class="hidden lg:flex space-x-8">
+        <a href="#" class="hover:text-accent transition">Shop</a>
+        <a href="#" class="hover:text-accent transition">Collections</a>
+        <a href="#" class="hover:text-accent transition">About</a>
+      </div>
+
+      <div class="text-center flex-1 lg:flex-none">
+        <h1 class="text-2xl font-serif">P & Dunni</h1>
+        <p class="text-xs tracking-widest text-accent">A SCENT COMPANY</p>
+      </div>
+
+      <div class="flex items-center space-x-4">
+        <button class="p-2">
+          <SearchIcon client:load />
+        </button>
+        <button class="p-2">
+          <UserIcon client:load />
+        </button>
+        <button class="p-2 relative">
+          <BagIcon client:load />
+          <span class="absolute -top-1 -right-1 bg-accent text-primary text-xs w-4 h-4 rounded-full flex items-center justify-center">
+            0
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
